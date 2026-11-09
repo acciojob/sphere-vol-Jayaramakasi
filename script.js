@@ -1,9 +1,16 @@
 function volume_sphere(event) {
     //Write your code here
 	event.preventDefault()
+
+	
 	let radius=event.target.children[1].value
+	if(radius > 0){
 	let volume=(4/3)*Math.PI*radius*radius*radius
-	event.target.children[3].value=volume.toFixed(4)
+	event.target.children[3].value=volume.toFixed(4)	
+	}
+	else{
+		event.target.children[3].value="NaN"
+	}
 	
 	
 	
